@@ -1,0 +1,29 @@
+﻿<Window x:Class="otchets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otchets"
+        mc:Ignorable="d"
+        Title="Ваш отчет)" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Пользователь:" Width="125" Margin="5" VerticalAlignment="Center" TextAlignment="Right"></TextBlock>
+                <ComboBox Name="ComboUsers" SelectionChanged="UpdateChart" SelectedIndex="0"  Width="175" Margin="5" ></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="otchet" Click="otchet_Click"  Content="Экспорт в Excel" VerticalAlignment = "Center" Width="175" Margin="5"  >
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        
+            
+       
+    </Grid>
+</Window>
